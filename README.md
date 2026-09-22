@@ -21,13 +21,16 @@ A modern, professional portfolio website for Nicole Tal, an AI-savvy instruction
 
 ## Color Palette
 
-Sampled from the NATLearning logo mark (sage, moss/olive, navy). See `src/app/globals.css` for the full derived token set (surfaces, lines, tint/deep pairs).
+The official NATLearning brand colors. See `src/app/globals.css` for the full derived token set (surfaces, lines, tint/deep pairs).
 
-- **Background**: `#F6F7F0` - pale sage/cream, used for hero and section backgrounds
-- **Text**: `#0C1D29` - deep navy, from the logo wordmark
-- **Accents**: `#A3B18A` - sage, from the logo swoosh
-- **Buttons**: `#676A57` - moss/olive, from the logo swoosh
-- **Additional**: `#3E4A3F` - deep moss, for secondary accents and hover states
+| Color | Hex | Use |
+| --- | --- | --- |
+| Sage | `#A3B18A` | Accents, highlights, icons |
+| Olive | `#6B705C` | Secondary headings, buttons |
+| Warm neutral | `#DAD7CD` | Backgrounds, panels, dividers |
+| Navy-black | `#0D1F2D` | Primary text, dark backgrounds |
+
+One extra tone, `--color-additional` (`#414C47`, an olive/navy blend), isn't part of the official table — it's used where the UI needs a fifth accent (nav hover, eyebrow labels, a third icon color) so it doesn't just repeat the button color.
 
 ## Getting Started
 

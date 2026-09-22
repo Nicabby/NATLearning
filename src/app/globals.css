@@ -1,50 +1,53 @@
 @import "tailwindcss";
 
 /* ---------------------------------------------------------------
-   Brand palette — sampled from the NATLearning logo mark (sage,
-   moss/olive, navy). Everything else on the site is derived from
-   these three.
+   Brand palette — the official NATLearning brand colours.
+   Everything else on the site is derived from these four.
    --------------------------------------------------------------- */
 :root {
-  --color-background: #F6F7F0;  /* pale sage/cream */
-  --color-text: #0C1D29;        /* deep navy, from the logo wordmark */
-  --color-accents: #A3B18A;     /* sage, from the logo swoosh */
-  --color-buttons: #676A57;     /* moss/olive, from the logo swoosh */
-  --color-additional: #3E4A3F;  /* deep moss (olive + navy blend) */
+  --color-background: #DAD7CD;  /* warm neutral — backgrounds, panels, dividers */
+  --color-text: #0D1F2D;        /* navy-black — primary text, dark backgrounds */
+  --color-accents: #A3B18A;     /* sage — accents, highlights, icons */
+  --color-buttons: #6B705C;     /* olive — secondary headings, buttons */
+  --color-additional: #414C47;  /* olive/navy blend — not in the brand table; the one
+                                    extra accent the UI needs (nav hover, eyebrow labels,
+                                    a third icon tone) so it isn't just a buttons repeat */
 }
 
 @theme inline {
   /* Brand */
-  --color-background: #F6F7F0;
-  --color-text: #0C1D29;
+  --color-background: #DAD7CD;
+  --color-text: #0D1F2D;
   --color-accents: #A3B18A;
-  --color-buttons: #676A57;
-  --color-additional: #3E4A3F;
+  --color-buttons: #6B705C;
+  --color-additional: #414C47;
 
   /* --- Derived: text ---------------------------------------------
      Steps of the brand navy, so secondary copy stays in the family
      instead of drifting to a generic grey. All pass WCAG AA on
      white, on --color-surface-muted and on the brand background.  */
-  --color-ink: #0C1D29;         /* = --color-text                  */
+  --color-ink: #0D1F2D;         /* = --color-text                  */
   --color-ink-soft: #515963;    /* secondary copy    7.1:1 on white */
   --color-ink-muted: #656C75;   /* labels, captions  5.3:1 on white */
 
-  /* --- Derived: surfaces ----------------------------------------- */
+  /* --- Derived: surfaces -----------------------------------------
+     Panels: warm neutral mixed toward white.                       */
   --color-surface: #FFFFFF;
-  --color-surface-muted: #F9FAF7;   /* sage mixed to 7%  */
-  --color-surface-tinted: #F9FAF3;  /* brand background, softened */
+  --color-surface-muted: #FBFAF9;   /* warm neutral at ~12% */
+  --color-surface-tinted: #F8F7F5;  /* warm neutral at ~20% */
 
-  /* --- Derived: lines -------------------------------------------- */
-  --color-line: #DCE1D3;            /* sage at 38%  */
-  --color-line-strong: #C3CCB3;     /* sage at 65%  */
+  /* --- Derived: lines ----------------------------------------------
+     Dividers: warm neutral at two strengths, per the brand table.   */
+  --color-line: #E7E5DF;            /* warm neutral at ~65% */
+  --color-line-strong: #DAD7CD;     /* warm neutral, full strength */
 
   /* --- Derived: tint / deep pairs --------------------------------
      Each pair is contrast-safe against itself (7.3:1 or better),
      for chips, badges and callouts.                               */
   --color-sage-tint: #EEF1EA;
   --color-sage-deep: #49503E;
-  --color-navy-tint: #E7E8EA;
-  --color-navy-deep: #0C1D29;
+  --color-navy-tint: #E7E9EA;
+  --color-navy-deep: #0D1F2D;
 
   --font-aptos: var(--font-aptos), system-ui, -apple-system, sans-serif;
 }
