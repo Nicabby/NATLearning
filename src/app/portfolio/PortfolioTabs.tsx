@@ -5,13 +5,6 @@ import { CATEGORIES, PROJECTS, type Category } from "./portfolio-data";
 
 type Filter = Category | "all";
 
-const STATUS_STYLES: Record<string, string> = {
-  Live: "bg-accents text-ink",
-  Built: "bg-sage-tint text-sage-deep",
-  Shipped: "bg-sage-tint text-sage-deep",
-  "In progress": "bg-navy-tint text-navy-deep",
-};
-
 export default function PortfolioTabs() {
   const [filter, setFilter] = useState<Filter>("all");
 
@@ -76,21 +69,12 @@ export default function PortfolioTabs() {
             key={p.slug}
             className="bg-surface rounded-2xl border border-line p-7 flex flex-col hover:border-accents transition-colors"
           >
-            <div className="flex items-start justify-between gap-4 mb-4">
-              <span className="text-xs font-semibold uppercase tracking-wider text-additional">
-                {CATEGORIES.find((c) => c.id === p.category)?.label}
-              </span>
-              <span
-                className={`shrink-0 text-xs font-semibold px-2.5 py-1 rounded-full ${
-                  STATUS_STYLES[p.status] ?? "bg-sage-tint text-sage-deep"
-                }`}
-              >
-                {p.status}
-              </span>
-            </div>
+            <span className="text-xs font-semibold uppercase tracking-wider text-additional mb-4">
+              {CATEGORIES.find((c) => c.id === p.category)?.label}
+            </span>
 
             <h3 className="text-2xl font-bold text-ink mb-3 leading-snug">
-              {p.title}
+              {p.deliverableType}
             </h3>
 
             <dl className="text-sm mb-5 space-y-1.5 border-l-2 border-accents pl-4">
@@ -113,9 +97,10 @@ export default function PortfolioTabs() {
             <ul className="space-y-2 mb-6 text-sm text-ink-soft">
               {p.highlights.map((h) => (
                 <li key={h} className="flex gap-2.5">
-                  <span aria-hidden="true" className="text-buttons mt-0.5">
-                    —
-                  </span>
+                  <span
+                    aria-hidden="true"
+                    className="mt-2 h-1.5 w-1.5 rounded-full bg-buttons shrink-0"
+                  />
                   <span>{h}</span>
                 </li>
               ))}

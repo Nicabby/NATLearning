@@ -33,15 +33,19 @@ export default function Portfolio() {
             Portfolio
           </h1>
           <p className="text-xl text-ink-soft leading-relaxed">
-            {PROJECTS.length} projects across corporate learning, published
-            classroom resources, and K–12 curriculum — spanning course design,
-            facilitation, assessment, and the web applications that carry a
-            program between sessions.
+            If you&apos;re trying to work out whether I can build the thing
+            you need, this is the evidence: {PROJECTS.length} deliverables
+            across corporate learning, published classroom resources, and
+            K–12 curriculum — the actual courses, guides and applications a
+            client or a classroom uses, not case studies written after the
+            fact.
           </p>
           <p className="text-sm text-ink-muted mt-6 max-w-2xl mx-auto">
-            Client work is attributed by sector rather than by name. Published
-            resources are credited to NATLearning. No outcome figures are
-            claimed here that have not been measured.
+            Client work is attributed by sector rather than by name, out of
+            respect for confidentiality — ask and I can share more, with the
+            client&apos;s permission. Published resources are credited to
+            NATLearning. No outcome figures are claimed here that have not
+            been measured.
           </p>
         </div>
       </section>
@@ -61,8 +65,9 @@ export default function Portfolio() {
               How the work is built
             </h2>
             <p className="text-lg text-ink-soft leading-relaxed">
-              These are the decisions that recur across the projects above —
-              drawn from what the work actually does, not from a statement of
+              If you bring me in, these are the defaults you&apos;re hiring —
+              the decisions that recur across every project above, drawn from
+              what the work actually does, not from a statement of
               philosophy.
             </p>
           </div>
