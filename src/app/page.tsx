@@ -47,11 +47,11 @@ export default function Home() {
               <div className="relative animate-float">
                 <div className="w-80 h-80 md:w-96 md:h-96 rounded-xl shadow-2xl overflow-hidden border-4 border-accents transition-transform duration-300 hover:scale-105">
                   <Image
-                    src="/nicole-headshot.png"
+                    src="/nicole-headshot.jpg"
                     alt="Nicole Tal - AI-Savvy Instructional Designer"
-                    width={384}
-                    height={384}
-                    className="w-full h-full object-cover"
+                    width={800}
+                    height={1200}
+                    className="w-full h-full object-cover object-top"
                     priority
                   />
                 </div>
